@@ -13,7 +13,7 @@ app.post('/get-file-size', upload.single('file'), function (req, res, next) {
   // req.file is the `avatar` file 
   // req.body will hold the text fields, if there were any 
   if(!req.file)res.end('Internal Server Error')
-  obj={size: req.file.size}
+  var obj={size: req.file.size}
   res.end(JSON.stringify(obj));
 })
 
